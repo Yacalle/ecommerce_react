@@ -15,18 +15,16 @@ const Login = ({ log, setLog }) => {
   const handleLoginWithGoogle = () => {
     signInWithPopup(auth, googleProvider)
       .then((res) => {
-        console.log(res.user.email);
         setLog(false);
         return dispatch(login(res.user));
       })
       .catch((err) => console.log(err));
   };
   // handleLoginWithFacebook hace los mismo que handleLoginWithGoogle pero con facebook.
+  //¡Se utiliza el 'console.log' para manejar el error por cuestiones de practicidad!
   const handleLoginWithFacebook = () => {
     signInWithPopup(auth, facebookProvider)
       .then((res) => {
-        console.log(res.user);
-        console.log(res.user.email);
         setLog(false);
         return dispatch(login(res.user));
       })
