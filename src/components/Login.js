@@ -18,17 +18,23 @@ const Login = ({ log, setLog }) => {
         setLog(false);
         return dispatch(login(res.user));
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        setLog(false);
+        return window.alert("No se ha podido iniciar sesion");
+      });
   };
   // handleLoginWithFacebook hace los mismo que handleLoginWithGoogle pero con facebook.
-  //¡Se utiliza el 'console.log' para manejar el error por cuestiones de practicidad!
+  //¡Se utiliza el 'window.alert' para informar al usuario del error por cuestiones de practicidad!
   const handleLoginWithFacebook = () => {
     signInWithPopup(auth, facebookProvider)
       .then((res) => {
         setLog(false);
         return dispatch(login(res.user));
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        setLog(false);
+        return window.alert("No se ha podido iniciar sesion");
+      });
   };
   return (
     <div className={`${classes.root} ${log && classes.displaymethodlog}`}>

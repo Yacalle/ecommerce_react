@@ -117,7 +117,7 @@ const useStyles = makeStyles((theme) => ({
       fontWeight: "bold",
     },
     [theme.breakpoints.down("sm")]: {
-      marginTop: "1rem",
+      marginTop: "2rem",
     },
   },
   carduser: {
@@ -148,7 +148,7 @@ const useStyles = makeStyles((theme) => ({
   },
   containershopproduct: {
     overflowY: "auto",
-    maxHeight: "10rem",
+    maxHeight: "5rem",
     "&::-webkit-scrollbar": {
       background: "#fff",
       width: ".5rem",

@@ -6,7 +6,7 @@ const CardCategory = ({ icon, title, marginLeft }) => {
   return (
     <div className={`${classes.root} ${marginLeft && classes.margintrue}`}>
       <div className={classes.containericon}>
-        <img src={icon} alt="" />
+        <img src={icon} alt="icon" />
       </div>
       <p>{title}</p>
     </div>
@@ -15,7 +15,6 @@ const CardCategory = ({ icon, title, marginLeft }) => {
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "80px",
-    display: "inline",
     height: "9rem",
     boxShadow: "10px 10px 26px -12px rgba(0,0,0,0.25)",
     borderRadius: "2rem",
@@ -38,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
   containericon: {
     width: "3rem",
     height: "3rem",
+    margin: "1rem",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",

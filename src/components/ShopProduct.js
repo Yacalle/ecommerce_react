@@ -32,6 +32,7 @@ const ShopProduct = ({ product }) => {
           );
         }
       }
+      return subtractQuantityProduct;
     });
 
     dispatch(setProduct(subtractQuantityProduct));
